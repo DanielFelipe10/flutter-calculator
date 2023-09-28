@@ -10,6 +10,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Calculadora',
+      theme: ThemeData(fontFamily: 'Grifter'),
       home: Scaffold(
         body: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20.0),
@@ -22,10 +23,12 @@ class MyApp extends StatelessWidget {
                   children: [
                     Text(
                       'Calculadora',
+                      textAlign: TextAlign.left,
                       style: TextStyle(
                           color: Colors.indigo,
-                          fontSize: 60,
-                          fontWeight: FontWeight.bold),
+                          fontSize: 50,
+                          fontWeight: FontWeight.bold,
+                          fontFamily: 'Grifter'),
                     ),
                     Text(
                       'Bienvenido',
@@ -50,11 +53,15 @@ class MyApp extends StatelessWidget {
                           shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(10))),
                     ),
+                    SizedBox(
+                      height: 20,
+                    ),
                     ElevatedButton(
                       onPressed: () {},
-                      child: Text('Más información'),
+                      child: Text('Más información',
+                          style: TextStyle(color: Colors.indigo)),
                       style: ElevatedButton.styleFrom(
-                          backgroundColor: Colors.indigo,
+                          backgroundColor: Colors.grey.shade300,
                           padding: EdgeInsets.symmetric(
                               horizontal: 100, vertical: 20),
                           minimumSize: Size(double.infinity, 50),
