@@ -39,7 +39,7 @@ class MyApp extends StatelessWidget {
                     )
                   ],
                 ),
-                Image.asset('figure.gif'),
+                Image.asset('../assets/figure.gif'),
                 Column(
                   children: [
                     ElevatedButton(
