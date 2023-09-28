@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
                     Text(
                       'Calculadora',
                       style: TextStyle(
-                          color: Colors.blueAccent,
+                          color: Colors.indigo,
                           fontSize: 60,
                           fontWeight: FontWeight.bold),
                     ),
@@ -39,9 +39,28 @@ class MyApp extends StatelessWidget {
                 Image.asset('figure.gif'),
                 Column(
                   children: [
-                    ElevatedButton(onPressed: () {}, child: Text('Empezar')),
                     ElevatedButton(
-                        onPressed: () {}, child: Text('Más información')),
+                      onPressed: () {},
+                      child: Text('Empezar'),
+                      style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.indigo,
+                          padding: EdgeInsets.symmetric(
+                              horizontal: 100, vertical: 20),
+                          minimumSize: Size(double.infinity, 50),
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(10))),
+                    ),
+                    ElevatedButton(
+                      onPressed: () {},
+                      child: Text('Más información'),
+                      style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.indigo,
+                          padding: EdgeInsets.symmetric(
+                              horizontal: 100, vertical: 20),
+                          minimumSize: Size(double.infinity, 50),
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(10))),
+                    ),
                   ],
                 )
               ],
