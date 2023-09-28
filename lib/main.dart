@@ -11,11 +11,22 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Material App',
       home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Material App Bar'),
-        ),
-        body: const Center(
-          child: Text('Hello World'),
+        body: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: [
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [Text('Calculadora'), Text('Bienvenido')],
+            ),
+            Image.asset('figure.gif'),
+            Column(
+              children: [
+                ElevatedButton(onPressed: () {}, child: Text('Empezar')),
+                ElevatedButton(
+                    onPressed: () {}, child: Text('Más información')),
+              ],
+            )
+          ],
         ),
       ),
     );
