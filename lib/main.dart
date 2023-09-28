@@ -9,24 +9,44 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Material App',
+      title: 'Calculadora',
       home: Scaffold(
-        body: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
-          children: [
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [Text('Calculadora'), Text('Bienvenido')],
-            ),
-            Image.asset('figure.gif'),
-            Column(
+        body: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20.0),
+          child: Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-                ElevatedButton(onPressed: () {}, child: Text('Empezar')),
-                ElevatedButton(
-                    onPressed: () {}, child: Text('Más información')),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      'Calculadora',
+                      style: TextStyle(
+                          color: Colors.blueAccent,
+                          fontSize: 60,
+                          fontWeight: FontWeight.bold),
+                    ),
+                    Text(
+                      'Bienvenido',
+                      style: TextStyle(
+                          color: Colors.grey,
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold),
+                    )
+                  ],
+                ),
+                Image.asset('figure.gif'),
+                Column(
+                  children: [
+                    ElevatedButton(onPressed: () {}, child: Text('Empezar')),
+                    ElevatedButton(
+                        onPressed: () {}, child: Text('Más información')),
+                  ],
+                )
               ],
-            )
-          ],
+            ),
+          ),
         ),
       ),
     );
